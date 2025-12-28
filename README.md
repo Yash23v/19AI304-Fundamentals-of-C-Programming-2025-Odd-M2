@@ -56,7 +56,42 @@
 ### Step 11:
   Stop
 # Program:
+```
+#include <stdio.h>
+int main()
+{
+    float math, science, english;
+    float average;
+    printf("Enter marks for Math: ");
+    scanf("%f", &math);
+    printf("Enter marks for Science: ");
+    scanf("%f", &science);
+    printf("Enter marks for English: ");
+    scanf("%f", &english);
+    average = (math + science + english) / 3.0f;
+    printf("\nAverage Marks = %.2f\n", average);
+    if (average >= 90.0f){
+        printf("Grade: A\n");
+    }
+    else{
+        if (average >= 75.0f){
+            printf("Grade: B\n");
+        }
+        else{
+            if (average >= 50.0f){
+                printf("Grade: C\n");
+            }
+            else{
+                printf("Grade: F\n");
+            }
+        }
+    }
+    return 0;
+}
+```
 # Output:
+<img width="1563" height="757" alt="Mod 2 Exp 6" src="https://github.com/user-attachments/assets/53337c2d-306a-45a0-8819-357ff6a7091f" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -88,7 +123,21 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 
 # Program:
+```
+#include <stdio.h>
+int main(){
+    int num = 15;
+    int i;
+    printf("Multiplication Table of %d:\n", num);
+    for (i=1;i<=10;i++){
+        printf("%d x %d = %d\n",num,i,num*i);
+    }
+    return 0;
+}
+```
 # Output:
+<img width="1244" height="405" alt="Mod 2 Exp 7" src="https://github.com/user-attachments/assets/cdf6514f-6619-4fd5-88ee-b787dc0c7d5a" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -131,7 +180,36 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 7:   
   Stop
 # Program:
+```
+#include <stdio.h>
+int main(){
+    int num,i=2,isPrime = 1;
+    printf("Enter a number: ");
+    scanf("%d",&num);
+    if (num<=1){
+        isPrime = 0;
+    }
+    else{
+        while (i * i <= num){
+            if (num % i == 0){
+                isPrime = 0;
+                break;
+            }
+            i++;
+        }
+    }
+    if (isPrime){
+        printf("%d is a Prime number.\n", num);
+    }
+    else{
+        printf("%d is NOT a Prime number.\n", num);
+    }
+    return 0;
+}
+```
 # Output:
+<img width="1339" height="752" alt="Mod 2 Exp 8" src="https://github.com/user-attachments/assets/00851df5-328d-49f9-a636-1b25815ae028" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -179,7 +257,30 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+```
+#include <stdio.h>
+int main()
+{
+    int i,j;
+    for (i = 1; i <= 5; i++)
+        printf("%d", i);
+    printf("\n");
+    for (i = 2; i <= 4; i++){
+        printf("%d", i);
+        for (j = 1; j <= 3; j++)
+            printf(" ");
+
+        printf("%d\n", 6 - i);
+    }
+    for (i = 5; i >= 1; i--)
+        printf("%d", i);
+
+    return 0;
+}
+```
 # Output:
+<img width="1337" height="658" alt="Mod 2 Exp 9" src="https://github.com/user-attachments/assets/7b389987-45d3-4587-8678-29b4aa1d4cc7" />
+
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -232,6 +333,28 @@ Thus, the program was implemented and executed successfully, and the required ou
   Decrease i by 1 and go back to Step 6.
 ### Step 8:
   Stop
+# Program:
+```
+#include <stdio.h>
+int main(){
+    int i,j;
+    printf("0\n");
+    for (i = 7; i >= 1; i--){
+        for (j = i; j <= 7; j++){
+            printf("%d ", j);
+        }
+        printf("0 ");
+        for (j = 7; j >= i; j--){
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
+# Output:
+<img width="1322" height="647" alt="Mod 2 Exp 10" src="https://github.com/user-attachments/assets/6c07a525-33fe-4d9a-a5a3-961b75671036" />
+
 # Result:
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
